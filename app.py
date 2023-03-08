@@ -11,7 +11,7 @@ logging.basicConfig(filename="scrapper.log",level=logging.NOTSET,format="%(ascti
 logging.info("Start Implementing The Concept")
 
 # Setup MongoDB Data Base 
-client = pymongo.MongoClient("mongodb+srv://AnantShah002:AnantShah002@cluster0.0eigvos.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://AnantShah002:**********@cluster0.0eigvos.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
 db=client["Product_Reviews_Scrapping"]
 product_coll=db["Product_Name"]

@@ -9,12 +9,6 @@ from urllib.request import urlopen
 import pymongo
 import logging
 
-# Setup MongoDB Data Base 
-client = pymongo.MongoClient("mongodb+srv://AnantShah002:********@cluster0.0eigvos.mongodb.net/?retryWrites=true&w=majority")
-db = client.test
-db=client["Product_Reviews_Scrapping"]
-product_coll=db["Product_Name"]
-
 # Create Flask
 app=Flask(__name__)
 
