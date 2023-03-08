@@ -1,3 +1,6 @@
+# This is core code file 
+# Scrapping  without API Create
+ 
 from flask import Flask,render_template,redirect,jsonify
 from flask_cors import CORS,cross_origin
 import requests
@@ -7,7 +10,7 @@ import pymongo
 import logging
 
 # Setup MongoDB Data Base 
-client = pymongo.MongoClient("mongodb+srv://AnantShah002:AnantShah002@cluster0.0eigvos.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://AnantShah002:********@cluster0.0eigvos.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
 db=client["Product_Reviews_Scrapping"]
 product_coll=db["Product_Name"]
@@ -48,13 +51,13 @@ def product_filet(list_data):
             link=flipcart_home+list_data[i].div.div.div.a["href"]
             products_list.append(link)# Now this is generate product link
         except Exception as e:
-            # print(e)
+            print(e)
             pass
         else:
-            # print(link)
+            print(link)
             pass
     else:
-        # print(len(list_data))
+        print(len(list_data))
         pass
 product_filet(flipcart_product_list)
 
@@ -188,8 +191,8 @@ def data_scruppting1(list_data,All,time=3):
         except Exception as e:
             print(f"Re-Error⭐ {e}")
 
-data_scruppting1(all_review_data_list,False,10)
+# data_scruppting1(all_review_data_list,False,10)
 
-# if __name__=="__main__":
-#     app.run(host="0.0.0.0")
+if __name__=="__main__":
+    app.run(host="0.0.0.0")
 

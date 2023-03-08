@@ -11,11 +11,11 @@
     <h1 style="text-align: center">Search</h1>
 
     <div class="form">
-        <form action="/review">
-            <input type="text" name="content" id="content"><br>
-            <input type="checkbox">
-            <input type="number">
-            <input type="submit" value="Search" >
+        <form action="/review" method="POST">
+            Product<input type="text" name="content" id="content"><br>
+            All Pages<input type="checkbox" name="allpages" id="allpages"><br>
+            No.Pages<input type="number" min=0 name="no_pages" id="no_pages"><br>
+            <input type="submit" value="Search">
         </form>
     </div>
 </div>
